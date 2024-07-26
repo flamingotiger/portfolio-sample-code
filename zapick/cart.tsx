@@ -49,9 +49,6 @@ const CartPage: React.FC = () => {
   const [isFetchError, setIsFetchError] = useState<boolean>(false);
 
   useEffect(() => {
-    // user의 값을 불러와서
-    // client의 shipping과 payment를 불러온다.
-    // 그리고 그 값을 기본값으로 넣어준다.
     if (!user.client) return;
     const shippingInfos = extractShippingInfos(user.client.fields);
     const paymentInfos = extractPaymentInfos(user.client.fields);
